@@ -70,7 +70,7 @@ if (isset($update['message'])) {//agar message mavjud bo'lsa
                     }else{
                         bot('sendMessage',[
                             'chat_id'=>$chat['id'],
-                            'text'=>$texts['ro_crash'].$a->description
+                            'text'=>$texts['crash'].$a->description
                         ]);
                     }
                 }
@@ -113,7 +113,28 @@ if (isset($update['message'])) {//agar message mavjud bo'lsa
                         ]);
                     }
                 }
+            }elseif ($text == '!pin') {
+                if (is_admin($from_id, $chat['id'])) {
+                    $message_id = $m['reply_to_message']['message_id'];
+                    $a = bot('pinChatMessage', [
+                        'chat_id' => $chat['id'],
+                        'message_id' => $message_id
+                    ]);
+                    if($a->ok == true){
+                        bot('sendMessage',[
+                            'chat_id'=>$chat['id'],
+                            'text'=>$texts['pin']
+                        ]);
+                    }else{
+                        bot('sendMessage',[
+                            'chat_id'=>$chat['id'],
+                            'text'=>$texts['crash'].$a->description
+                        ]);
+                    }
+                }
             }
+
+
         }
 
     }

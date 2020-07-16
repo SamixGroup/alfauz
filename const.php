@@ -15,12 +15,13 @@ $texts = [
     'crash'=>'Oops! Qandaydur nosozlik: ',
     'kick'=>'Foydalanuvchi guruhdan xaydaldi',
     'ban'=>'Foydalanuvchi guruhdan butunlay xaydaldi',
+    'pin'=>"Xabar qistirildi!",
     'help_private' => "Bot guruhda qila oladigan ishlar:
 `!ro` - 30 daqiqaga *read-only*
 `!kick` - guruhdan qaytib kira oladigan qilib chiqarish
 `!ban` - guruhdan qaytib kira olmaydigan qilib chiqarish
 `!pin` - Habarni tepaga qistirish (Закрепить,pin)
-*Bot ishlashi uchun guruhda administrator bo'lishi sharta!*
+*Bot ishlashi uchun guruhda administrator bo'lishi shart!*
 Yaratuvchi: @Kakashi\_Xatake"
 ];
 
